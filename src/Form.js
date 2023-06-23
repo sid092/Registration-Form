@@ -6,7 +6,7 @@ const Form = () => {
     const [flag, setFlag]= useState(false)
     
     useEffect(()=>{
-        setInputData(data)
+        setInputData({})
     },[flag])
 
     function handleData(e){
@@ -33,24 +33,22 @@ const Form = () => {
                     placeholder='Enter your name'
                     name ='name' 
                     value={InputData.name}
-                    onChange={handleData}>
-                    </input>
+                    onChange={handleData}/>
                 </div>
                 <div>
                     <input type ="email" 
                     placeholder='Enter your email' 
                     name ='email'
                     value={InputData.email}
-                    onChange={handleData}>
-                    </input>
+                    onChange={handleData}/>
                 </div>
                 <div>
                     <input type ="password"
                     placeholder='Enter your password' 
                     name ='password'
                     value={InputData.password}
-                    onChange={handleData}>
-                    </input>
+                    onChange={handleData}/>
+                    
                 </div>
                 <div>
                     <button type='submit'>submit</button>
